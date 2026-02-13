@@ -1,139 +1,136 @@
 * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        body {
-            font-family: 'Georgia', serif;
-            background: linear-gradient(135deg, #ffeef8 0%, #ffe4f3 100%);
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 40px 20px;
-        }
+body {
+    font-family: 'Georgia', serif;
+    background: linear-gradient(135deg, #ffeef8 0%, #ffe4f3 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
 
-        .title {
-            font-size: 3em;
-            color: #d63384;
-            margin-bottom: 60px;
-            text-align: center;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
-        }
+.title {
+    font-size: 3em;
+    color: #d63384;
+    margin-bottom: 60px;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
 
-        .bouquet-container {
-            position: relative;
-            width: 600px;
-            height: 300px;
-            margin-bottom: 40px;
-        }
+.bouquet-container {
+    position: relative;
+    width: 90vw;
+    max-width: 600px;
+    height: calc(90vw * 0.5);
+    max-height: 300px;
+    margin-bottom: 40px;
+}
 
-        /* Base bouquet (wrapping, ribbons, greenery) */
-        .bouquet-base {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            z-index: 1;
-        }
+/* Base bouquet (wrapping, ribbons, greenery) */
+.bouquet-base {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
 
-        .bouquet-base img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-        }
+.bouquet-base img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
 
-        /* Flower positions - adjust these coordinates to match your bouquet design */
-        .flower-layer {
-            position: absolute;
-            z-index: 2;
-        }
+/* Flower positions - adjust these coordinates to match your bouquet design */
+.flower-layer {
+    position: absolute;
+    z-index: 2;
+}
 
-        .flower-layer img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.2));
-        }
+.flower-layer img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.2));
+}
 
-        /* Position 1 - Top Left */
-        .flower-pos-1 {
-            width: 90px;
-            height: 90px;
-            top: 0px;
-            left: 250px;
-            transform: rotate(-15deg);
-        }
+/* Position 1 - Top Left */
+.flower-pos-1 {
+    width: 15%;        /* 90px ÷ 600px = 15% */
+    height: 30%;       /* 90px ÷ 300px = 30% */
+    top: 0%;           /* 0px ÷ 300px = 0% */
+    left: 41.67%;      /* 250px ÷ 600px = 41.67% */
+    transform: rotate(-15deg);
+}
 
-        /* Position 2 - Top Right */
-        .flower-pos-2 {
-            width: 80px;
-            height: 80px;
-            top: 40px;
-            left: 200px;
-            transform: rotate(10deg);
-        }
+/* Position 2 - Top Right */
+.flower-pos-2 {
+    width: 13.33%;     /* 80px ÷ 600px = 13.33% */
+    height: 26.67%;    /* 80px ÷ 300px = 26.67% */
+    top: 13.33%;       /* 40px ÷ 300px = 13.33% */
+    left: 33.33%;      /* 200px ÷ 600px = 33.33% */
+    transform: rotate(10deg);
+}
 
-        /* Position 3 - Bottom Left */
-        .flower-pos-3 {
-            width: 70px;
-            height: 70px;
-            top: 80px;
-            left: 250px;
-            transform: rotate(-20deg);
-        }
+/* Position 3 - Bottom Left */
+.flower-pos-3 {
+    width: 11.67%;     /* 70px ÷ 600px = 11.67% */
+    height: 23.33%;    /* 70px ÷ 300px = 23.33% */
+    top: 26.67%;       /* 80px ÷ 300px = 26.67% */
+    left: 41.67%;      /* 250px ÷ 600px = 41.67% */
+    transform: rotate(-20deg);
+}
 
-        /* Position 4 - Bottom Right */
-        .flower-pos-4 {
-            width: 80px;
-            height: 80px;
-            top: 50px;
-            left: 310px;
-            transform: rotate(15deg);
-        }
+/* Position 4 - Bottom Right */
+.flower-pos-4 {
+    width: 13.33%;     /* 80px ÷ 600px = 13.33% */
+    height: 26.67%;    /* 80px ÷ 300px = 26.67% */
+    top: 16.67%;       /* 50px ÷ 300px = 16.67% */
+    left: 51.67%;      /* 310px ÷ 600px = 51.67% */
+    transform: rotate(15deg);
+}
 
-        .message {
-            font-size: 1.5em;
-            color: #8b5a7c;
-            text-align: center;
-            max-width: 600px;
-            line-height: 1.6;
-            font-style: italic;
-        }
+.message {
+    font-size: 1.5em;
+    color: #8b5a7c;
+    text-align: center;
+    max-width: 600px;
+    line-height: 1.6;
+    font-style: italic;
+}
 
-        .back-button {
-            background: #d63384;
-            color: white;
-            border: none;
-            padding: 15px 50px;
-            font-size: 1.2em;
-            border-radius: 50px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 5px 20px rgba(214, 51, 132, 0.3);
-            font-family: 'Georgia', serif;
-            font-weight: bold;
-            margin-top: 30px;
-        }
+.back-button {
+    background: #d63384;
+    color: white;
+    border: none;
+    padding: 15px 50px;
+    font-size: 1.2em;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 20px rgba(214, 51, 132, 0.3);
+    font-family: 'Georgia', serif;
+    font-weight: bold;
+    margin-top: 30px;
+}
 
-        .back-button:hover {
-            background: #b52a6b;
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(214, 51, 132, 0.4);
-        }
+.back-button:hover {
+    background: #b52a6b;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(214, 51, 132, 0.4);
+}
 
-        @media (max-width: 700px) {
-            .bouquet-container {
-                width: 90vw;
-                height: calc(90vw * 1.17);
-            }
-            
-            .title {
-                font-size: 2em;
-            }
-            
-            .message {
-                font-size: 1.2em;
-            }
-        }
+@media (max-width: 700px) {
+    .title {
+        font-size: 2em;
+    }
+    
+    .message {
+        font-size: 1.2em;
+    }
+}
