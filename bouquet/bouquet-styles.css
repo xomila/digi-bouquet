@@ -5,8 +5,8 @@
 }
 
 body {
-    font-family: 'Georgia', serif;
-    background: linear-gradient(135deg, #ffeef8 0%, #ffe4f3 100%);
+    font-family: 'Tiny5';
+    background: #F9DFDF;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -32,7 +32,7 @@ body {
     margin-bottom: 40px;
 }
 
-/* Base bouquet (wrapping, ribbons, greenery) */
+
 .bouquet-base {
     position: absolute;
     width: 100%;
@@ -46,7 +46,6 @@ body {
     object-fit: contain;
 }
 
-/* Flower positions - adjust these coordinates to match your bouquet design */
 .flower-layer {
     position: absolute;
     z-index: 2;
@@ -110,11 +109,11 @@ body {
     border: none;
     padding: 15px 50px;
     font-size: 1.2em;
-    border-radius: 50px;
+    border-radius: 0px;
     cursor: pointer;
     transition: all 0.3s ease;
     box-shadow: 0 5px 20px rgba(214, 51, 132, 0.3);
-    font-family: 'Georgia', serif;
+    font-family: 'Tiny5';
     font-weight: bold;
     margin-top: 30px;
 }
