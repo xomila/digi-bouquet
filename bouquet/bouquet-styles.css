@@ -1,0 +1,139 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background: linear-gradient(135deg, #ffeef8 0%, #ffe4f3 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+
+        .title {
+            font-size: 3em;
+            color: #d63384;
+            margin-bottom: 60px;
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .bouquet-container {
+            position: relative;
+            width: 600px;
+            height: 700px;
+            margin-bottom: 40px;
+        }
+
+        /* Base bouquet (wrapping, ribbons, greenery) */
+        .bouquet-base {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        .bouquet-base img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        /* Flower positions - adjust these coordinates to match your bouquet design */
+        .flower-layer {
+            position: absolute;
+            z-index: 2;
+        }
+
+        .flower-layer img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.2));
+        }
+
+        /* Position 1 - Top Left */
+        .flower-pos-1 {
+            width: 180px;
+            height: 180px;
+            top: 80px;
+            left: 120px;
+            transform: rotate(-15deg);
+        }
+
+        /* Position 2 - Top Right */
+        .flower-pos-2 {
+            width: 180px;
+            height: 180px;
+            top: 100px;
+            left: 300px;
+            transform: rotate(10deg);
+        }
+
+        /* Position 3 - Bottom Left */
+        .flower-pos-3 {
+            width: 180px;
+            height: 180px;
+            top: 240px;
+            left: 80px;
+            transform: rotate(-20deg);
+        }
+
+        /* Position 4 - Bottom Right */
+        .flower-pos-4 {
+            width: 180px;
+            height: 180px;
+            top: 260px;
+            left: 340px;
+            transform: rotate(15deg);
+        }
+
+        .message {
+            font-size: 1.5em;
+            color: #8b5a7c;
+            text-align: center;
+            max-width: 600px;
+            line-height: 1.6;
+            font-style: italic;
+        }
+
+        .back-button {
+            background: #d63384;
+            color: white;
+            border: none;
+            padding: 15px 50px;
+            font-size: 1.2em;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 20px rgba(214, 51, 132, 0.3);
+            font-family: 'Georgia', serif;
+            font-weight: bold;
+            margin-top: 30px;
+        }
+
+        .back-button:hover {
+            background: #b52a6b;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(214, 51, 132, 0.4);
+        }
+
+        @media (max-width: 700px) {
+            .bouquet-container {
+                width: 90vw;
+                height: calc(90vw * 1.17);
+            }
+            
+            .title {
+                font-size: 2em;
+            }
+            
+            .message {
+                font-size: 1.2em;
+            }
+        }

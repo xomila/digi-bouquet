@@ -37,5 +37,5 @@
             localStorage.setItem('selectedFlowers', JSON.stringify(selectedFlowers));
             
             // Navigate to bouquet page
-            window.location.href = 'bouquet.html';
+            window.location.href = 'bouquet/bouquet.html';
         });
