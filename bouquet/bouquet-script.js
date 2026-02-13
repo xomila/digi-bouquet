@@ -4,7 +4,7 @@
             'sunflower': '../photos/orange flower wt stem.png',
             'daisy': '../photos/blue flower 2 wt stem.png',
             'lily': '../photos/orange flower wt stem2.png',
-            'orchid': '..photos/pink blue flower wt stem.png',
+            'orchid': '../photos/pink blue flower wt stem.png',
             'peony': '../photos/purple flower wt stem.png',
             'carnation': '../photos/purple pink wt stem.png'
         };
