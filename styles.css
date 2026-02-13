@@ -6,7 +6,7 @@
 
         body {
             font-family: 'Tiny5';
-            background: #F9DFDF;
+            background-image: url('photos/background.png');
             min-height: 100vh;
             display: flex;
             flex-direction: column;
@@ -17,7 +17,7 @@
 
         .title {
             font-size: 3em;
-            color: #d63384;
+            color: black;
             margin-bottom: 60px;
             text-align: center;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
@@ -78,7 +78,7 @@
 
         .flower-image {
             width: 100%;
-            height: 120px;
+            height: 150px;
             object-fit: contain;
         }
 
