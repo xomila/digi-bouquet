@@ -1,0 +1,137 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background: #F9DFDF;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+
+        .title {
+            font-size: 3em;
+            color: #d63384;
+            margin-bottom: 60px;
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            width: 100%;
+        }
+
+        .subtitle {
+            font-size: 1.2em;
+            color: #8b5a7c;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .flower-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            max-width: 1000px;
+            margin-bottom: 50px;
+        }
+
+        .flower-card {
+            background: transparent;
+            border-radius: 0;
+            padding: 0;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .flower-card:hover {
+            transform: scale(1.2);
+            z-index: 10;
+        }
+
+        .flower-card.selected {
+            border: 4px solid #d63384;
+            border-radius: 15px;
+            padding: 5px;
+        }
+
+        .flower-card.selected::after {
+            content: "✓";
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #d63384;
+            color: white;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        .flower-image {
+            width: 100%;
+            height: 80px;
+            object-fit: contain;
+        }
+
+        .flower-name {
+            display: none;
+        }
+
+        .next-button {
+            background: #d63384;
+            color: white;
+            border: none;
+            padding: 18px 60px;
+            font-size: 1.3em;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 20px rgba(214, 51, 132, 0.3);
+            font-family: 'Georgia', serif;
+            font-weight: bold;
+        }
+
+        .next-button:hover:not(:disabled) {
+            background: #b52a6b;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(214, 51, 132, 0.4);
+        }
+
+        .next-button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            box-shadow: none;
+        }
+
+        .counter {
+            font-size: 1.1em;
+            color: #8b5a7c;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        @media (max-width: 1000px) {
+            .flower-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 700px) {
+            .flower-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+            
+            .title {
+                font-size: 2em;
+            }
+        }
